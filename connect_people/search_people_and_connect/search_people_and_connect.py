@@ -33,6 +33,8 @@ def search_people_and_connect(driver, information_people):
         sleep(2)
         quantity_people_connects += connect_people_of_page(driver)
         sleep(2)
+        driver.execute_script("window.scrollTo(0, document.body.scrollHeight);")
+        sleep(2)
         next_page_button = driver.find_element(By.XPATH, '//*[@aria-label="Avançar"]')
         next_page_button.click()
         sleep(2)
