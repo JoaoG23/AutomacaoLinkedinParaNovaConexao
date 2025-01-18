@@ -1,16 +1,19 @@
-# LinkedIn New Connections Automation 🤝
+## LinkedIn New Connections Automation 🤝
 
-## 1. Introduction  
+<img src="./assets/icon.ico" align="right">
+
+### 1. Introduction  
 
 This project automates connecting with new people on LinkedIn based on a specified job description. It uses Python, Selenium, and Webdriver Manager to navigate and interact with LinkedIn's web interface.
 
-## 2. Technologies Used 📲  
+### 2. Technologies Used 📲  
 
 - **Python**  
+- **Google Chrome**  
 - **Selenium**  
 - **Webdriver Manager**  
 
-## 3. Installation 🛠️  
+### 3. Installation 🛠️  
 
 ### Steps to install:  
 
@@ -31,7 +34,7 @@ This project automates connecting with new people on LinkedIn based on a specifi
    ```  
 4. Run **python __init__.py**
 
-## 4. Features ✔️  
+### 4. Features ✔️  
 
 - [x] Access LinkedIn web page.
 - [x] Log in using provided username and password.
@@ -40,7 +43,7 @@ This project automates connecting with new people on LinkedIn based on a specifi
     - [x] Navigate through pages.
     - [x] Send connection requests until reaching the connection limit.
 
-## 5. Usage 👨‍💻  
+### 5. Usage 👨‍💻  
 
 1. Fill in your LinkedIn credentials and the search description in the `.env` file.  
 2. Run the script:  
@@ -48,21 +51,21 @@ This project automates connecting with new people on LinkedIn based on a specifi
    python linkedin_connect.py  
    ```  
 
-## 6. Requirements  
+### 6. Requirements  
 
 - A registered LinkedIn account is required.
 
-## 7. Benefits and Limitations 🛠️  
+### 7. Benefits and Limitations 🛠️  
 
-### Benefits:  
+#### Benefits:  
 - Automates the process of connecting with multiple people on LinkedIn.
 - Saves time by avoiding manual connection requests.
 
-### Limitations:  
+#### Limitations:  
 - LinkedIn's rate limits can restrict the number of connections per day.
 - Internet connection is required.
 
-## 8. Author  
+### 8. Author  
 
  <img style="border-radius:50%;" src="https://avatars.githubusercontent.com/u/80895578?v=4" width="100px;" alt=""/>  
  <br />  
