@@ -79,7 +79,3 @@ Developed with 🤖 by Joao Guilherme 👋🏽 Contact me via:
 ## 9. License 📄  
 
 [![License](https://shields.io/github/license/Ileriayo/markdown-badges?style=for-the-badge)](./LICENSE)  
-
----
-
-Gostaria de adicionar mais alguma informação ou ajustar algo específico? 😊
