@@ -19,7 +19,7 @@ def search_people_and_connect(driver, information_people):
     limit_connects = os.getenv("LIMIT_CONNECTIONS")
     quantity_people_connects = 0
     
-    while quantity_people_connects < int(limit_connects):
+    while quantity_people_connects <= int(limit_connects):
         sleep(2)
         quantity_people_connects += connect_people_of_page(driver)
         sleep(2)
