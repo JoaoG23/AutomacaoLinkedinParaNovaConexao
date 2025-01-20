@@ -8,6 +8,7 @@ from dotenv import load_dotenv
 from httpcore import TimeoutException
 from selenium import webdriver
 from selenium.common.exceptions import WebDriverException
+from selenium.common.exceptions import NoSuchElementException
 from webdriver_manager.chrome import ChromeDriverManager
 from selenium.webdriver.chrome.service import Service
 
@@ -16,9 +17,6 @@ from selenium.common.exceptions import InvalidSelectorException
 from connect_people.do_login.do_login import do_login
 from connect_people.search_people_and_connect.search_people_and_connect import search_people_and_connect
 from utils.logging.log_manager.log_manager import write_to_log
-# from utils.wait_for_element_load.wait_for_element_load import wait_for_element_load
-
-
 
 options = webdriver.ChromeOptions()
 service = Service(ChromeDriverManager().install())
@@ -41,12 +39,14 @@ if __name__ == '__main__':
             'description': os.getenv("DESCRIPTION"),
             'location': os.getenv("LOCATION")
         }
-        sleep(12)
+        sleep(11)
         
         search_people_and_connect(driver, search_data_people)
    
     except WebDriverException as e:
         write_to_log(f"WebDriverException: {traceback.format_exc()}", type='error')
+    except NoSuchElementException as e:
+        write_to_log(f"NoSuchElementException: {traceback.format_exc()}", type='error')
     except InvalidSelectorException as e:
         write_to_log(f"InvalidSelectorException: {traceback.format_exc()}", type='error')
     except TimeoutException as e:
