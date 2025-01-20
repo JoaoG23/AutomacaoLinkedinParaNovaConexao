@@ -11,12 +11,29 @@ def connect_people_of_page(driver):
     
     for connect_button in connect_people_buttons:
         connect_button.click()
-        sleep(3)
-        no_send_note_button = driver.find_element(By.XPATH, "//*[text()='Enviar sem nota']")
-        no_send_note_button.click()
-        sleep(3)
+        sleep(2)
+        verify_connection_required_email(driver)
     return len(connect_people_buttons)
+# //*[@id="ember730"]
 
+def verify_connection_required_email(driver):
+
+    sleep(2)    
+    email_inputs = driver.find_elements(By.XPATH, '//input[@name="email"]')
+    if len(email_inputs) >= 1:
+        sleep(1)    
+        exit_button = driver.find_element(By.XPATH, '//*[@aria-label="Fechar"]')
+        exit_button.click()
+        
+        msg = "Conexão nao realizada, pois necessita de um email verificado."
+        write_to_log(msg, type='info')
+        return
+    
+    sleep(1) 
+    no_send_note_button = driver.find_element(By.XPATH, "//*[text()='Enviar sem nota']")
+    no_send_note_button.click()
+    sleep(2)
+    
 def search_people_and_connect(driver, information_people):
     
     description_people = information_people['description']

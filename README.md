@@ -4,6 +4,8 @@
 
 ### 1. Introduction  
 
+## Time: 6
+
 This project automates connecting with new people on LinkedIn based on a specified job description. It uses Python, Selenium, and Webdriver Manager to navigate and interact with LinkedIn's web interface.
 
 ### 2. Technologies Used 📲  
@@ -41,6 +43,7 @@ This project automates connecting with new people on LinkedIn based on a specifi
 - [x] Search for people based on a job description.
 - [x] Connect with individuals:
     - [x] Navigate through pages.
+    - [x] If user need one message,the app will sent it
     - [x] Send connection requests until reaching the connection limit.
 
 ### 5. Usage 👨‍💻  
