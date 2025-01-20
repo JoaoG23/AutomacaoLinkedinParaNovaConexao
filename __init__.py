@@ -17,7 +17,6 @@ from selenium.common.exceptions import InvalidSelectorException
 from connect_people.do_login.do_login import do_login
 from connect_people.search_people_and_connect.search_people_and_connect import search_people_and_connect
 from utils.logging.log_manager.log_manager import write_to_log
-# from utils.wait_for_element_load.wait_for_element_load import wait_for_element_load
 
 options = webdriver.ChromeOptions()
 service = Service(ChromeDriverManager().install())
@@ -40,7 +39,7 @@ if __name__ == '__main__':
             'description': os.getenv("DESCRIPTION"),
             'location': os.getenv("LOCATION")
         }
-        sleep(12)
+        sleep(11)
         
         search_people_and_connect(driver, search_data_people)
    

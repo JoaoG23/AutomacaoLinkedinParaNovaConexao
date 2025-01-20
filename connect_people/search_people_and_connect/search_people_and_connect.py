@@ -1,38 +1,11 @@
 import os
 from time import sleep
+from connect_people.connect_people_of_page.connect_people_of_page import connect_people_of_page
 from connect_people.encode_message_for_url.encode_message_for_url import encode_message_for_url
 from selenium.webdriver.common.by import By
 
 from utils.logging.log_manager.log_manager import write_to_log
 
-def connect_people_of_page(driver):
-    connect_people_buttons = driver.find_elements(By.XPATH,"//*[text()='Conectar']")
-    sleep(2)
-    
-    for connect_button in connect_people_buttons:
-        connect_button.click()
-        sleep(2)
-        verify_connection_required_email(driver)
-    return len(connect_people_buttons)
-# //*[@id="ember730"]
-
-def verify_connection_required_email(driver):
-
-    sleep(2)    
-    email_inputs = driver.find_elements(By.XPATH, '//input[@name="email"]')
-    if len(email_inputs) >= 1:
-        sleep(1)    
-        exit_button = driver.find_element(By.XPATH, '//*[@aria-label="Fechar"]')
-        exit_button.click()
-        
-        msg = "Conexão nao realizada, pois necessita de um email verificado."
-        write_to_log(msg, type='info')
-        return
-    
-    sleep(1) 
-    no_send_note_button = driver.find_element(By.XPATH, "//*[text()='Enviar sem nota']")
-    no_send_note_button.click()
-    sleep(2)
     
 def search_people_and_connect(driver, information_people):
     
@@ -41,7 +14,7 @@ def search_people_and_connect(driver, information_people):
     description_encoded = encode_message_for_url(description_people)
     sleep(5)
     driver.get(f'https://www.linkedin.com/search/results/people/?keywords={description_encoded}')
-    sleep(8)
+    sleep(7)
     
     limit_connects = os.getenv("LIMIT_CONNECTIONS")
     quantity_people_connects = 0
