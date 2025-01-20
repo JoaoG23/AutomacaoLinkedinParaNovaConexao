@@ -4,7 +4,7 @@
 
 ### 1. Introduction  
 
-## Time: 6
+## Time: 6,5
 
 This project automates connecting with new people on LinkedIn based on a specified job description. It uses Python, Selenium, and Webdriver Manager to navigate and interact with LinkedIn's web interface.
 
@@ -51,7 +51,7 @@ This project automates connecting with new people on LinkedIn based on a specifi
 1. Fill in your LinkedIn credentials and the search description in the `.env` file.  
 2. Run the script:  
    ```bash  
-   python linkedin_connect.py  
+   python __init__.py  
    ```  
 
 ### 6. Requirements  
